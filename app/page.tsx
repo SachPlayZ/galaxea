@@ -1,9 +1,14 @@
+import Hero from '@/components/component/Hero'
+import TopCreators from '@/components/component/TopCreators'
+import TopCreatorsCarousel from '@/components/component/TopCreatorsCarousel'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      
+    <div className='flex flex-col'>
+      <Hero />
+      <TopCreators />
+      <TopCreatorsCarousel />
     </div>
   )
 }

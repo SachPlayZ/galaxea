@@ -2,6 +2,7 @@ import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+import Image from "next/image"
 
 export function Navbar() {
   return (
@@ -9,7 +10,7 @@ export function Navbar() {
       <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-2 mr-8">
           <img
-            src="/placeholder.svg"
+            src="/galaxy.png"
             alt="Logo"
             className="h-8 w-8"
             width="32"
@@ -62,16 +63,16 @@ export function Navbar() {
           <input
             type="text"
             placeholder="Search NFTs and collections"
-            className="pl-8 pr-4 py-2 bg-gray-800 rounded-full text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="pl-8 pr-4 py-2 bg-zinc-900 rounded-full text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
           <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500" />
         </div>
         <div className="flex space-x-4 *:p-2">
-        <CloudLightningIcon className="h-10 w-10 text-gray-500 rounded-full cursor-pointer hover:text-gray-300 hover:bg-slate-800" />
-        <BellIcon className="h-10 w-10 text-gray-500 rounded-full cursor-pointer border-orange-600 hover:text-gray-300 hover:bg-slate-800" />
+        <Image alt="ligh" src="/lightning.svg" height={40} width={40} className=" border border-slate-700 text-gray-500 rounded-full cursor-pointer hover:text-gray-300 hover:bg-slate-800" />
+        <BellIcon className="border border-slate-700 h-10 w-10 text-gray-500 rounded-full cursor-pointer hover:text-gray-300 hover:bg-slate-800" />
         </div>
         <Avatar>
-          <AvatarImage src="/placeholder-user.jpg" alt="User Avatar" />
+          <AvatarImage src="/usericon.png" alt="User Avatar" />
           <AvatarFallback>U</AvatarFallback>
         </Avatar>
         <Button className="bg-purple-500 text-white hover:bg-purple-600 rounded-3xl">Create</Button>
@@ -89,34 +90,13 @@ function BellIcon(props:any) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="white"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
     >
       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
-    </svg>
-  )
-}
-
-
-function CloudLightningIcon(props:any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973" />
-      <path d="m13 12-3 5h4l-3 5" />
     </svg>
   )
 }

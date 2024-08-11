@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from '@/lib/utils'
 import { Navbar } from "@/components/component/navbar";
 
-const fontHeading = Inter({
+const fontHeading = Poppins({
   subsets: ['latin'],
-  display: 'swap',
   variable: '--font-heading',
+  weight: '400',
 })
 
-const fontBody = Inter({
+const fontBody = Poppins({
   subsets: ['latin'],
-  display: 'swap',
   variable: '--font-body',
+  weight: '400'
 })
 
 export const metadata: Metadata = {
