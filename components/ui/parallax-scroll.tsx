@@ -52,7 +52,7 @@ export const InfiniteMovingCards = ({
   };
 
   return (
-    <div className={cn("relative h-[40rem] w-full overflow-hidden", className)}>
+    <div className={cn("relative h-[60rem] w-full overflow-hidden", className)}>
       {/* Top Gradient */}
       <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-black via-black/30 to-transparent z-10 pointer-events-none" />
       
@@ -77,7 +77,7 @@ export const InfiniteMovingCards = ({
       </div>
       
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black via-transparent to-transparent z-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black via-black/30 to-transparent z-10 pointer-events-none" />
 
       <div ref={containerRef} className="relative flex gap-10 justify-center">
         <ul
