@@ -5,7 +5,7 @@ import { InfiniteMovingCards } from '../ui/parallax-scroll';
 const MovingImages = () => {
   return (
     <div>
-        <InfiniteMovingCards className='mt-20' images={images} />
+        <InfiniteMovingCards className='pt-14' images={images} />
     </div>
   )
 }

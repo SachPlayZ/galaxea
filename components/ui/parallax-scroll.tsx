@@ -42,7 +42,7 @@ export const InfiniteMovingCards = ({
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "40s");
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
+        containerRef.current.style.setProperty("--animation-duration", "100s");
       }
     }
   };
@@ -50,14 +50,14 @@ export const InfiniteMovingCards = ({
   return (
     <div className={cn("relative h-[40rem] w-full overflow-hidden", className)}>
       {/* Top Gradient */}
-      <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-black via-transparent to-transparent z-10 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-black via-black/30 to-transparent z-10 pointer-events-none" />
       
       {/* Ribbon with infinite moving text (Top Ribbon 1) */}
       <div className="ribbon-container-left">
         <div className="ribbon">
           <span className="ribbon-text">
-            Trending NFT all the time! * Trending NFT all the time! * Trending
-            NFT all the time!
+          Trending NFT all the time!  ✦  Trending NFT all the time!  ✦  Trending NFT all the time!  ✦  
+          Trending NFT all the time!  ✦  Trending NFT all the time!  ✦  Trending NFT all the time!
           </span>
         </div>
       </div>
@@ -66,8 +66,8 @@ export const InfiniteMovingCards = ({
       <div className="ribbon-container-right">
         <div className="ribbon">
           <span className="ribbon-text">
-            Trending NFT all the time! * Trending NFT all the time! * Trending
-            NFT all the time!
+          Trending NFT all the time!  ✦  Trending NFT all the time!  ✦  Trending NFT all the time!  ✦  
+          Trending NFT all the time!  ✦  Trending NFT all the time!  ✦  Trending NFT all the time!
           </span>
         </div>
       </div>
