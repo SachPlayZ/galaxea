@@ -5,11 +5,15 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export const InfiniteMovingCards = ({
-  images,
+  images1,
+  images2,
+  images3,
   speed = "slow",
   className,
 }: {
-  images: string[];
+  images1: string[];
+  images2: string[];
+  images3: string[];
   speed?: "fast" | "normal" | "slow";
   className?: string;
 }) => {
@@ -80,7 +84,7 @@ export const InfiniteMovingCards = ({
           ref={scrollerRef1}
           className="flex flex-col items-center gap-4 animate-scroll-vertical"
         >
-          {images.map((src, idx) => (
+          {images1.map((src, idx) => (
             <li
               className="w-[300px] h-[400px] max-w-full relative flex-shrink-0"
               key={`image-${idx}-1`}
@@ -98,7 +102,7 @@ export const InfiniteMovingCards = ({
           ref={scrollerRef2}
           className="flex flex-col-reverse items-center gap-4 animate-scroll-vertical-reverse"
         >
-          {images.map((src, idx) => (
+          {images2.map((src, idx) => (
             <li
               className="w-[300px] h-[400px] max-w-full relative flex-shrink-0"
               key={`image-${idx}-2`}
@@ -116,7 +120,7 @@ export const InfiniteMovingCards = ({
           ref={scrollerRef3}
           className="flex flex-col items-center gap-4 animate-scroll-vertical"
         >
-          {images.map((src, idx) => (
+          {images3.map((src, idx) => (
             <li
               className="w-[300px] h-[400px] max-w-full relative flex-shrink-0"
               key={`image-${idx}-3`}
