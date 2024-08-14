@@ -40,3 +40,82 @@
     @apply font-heading;
   }
 }
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-vertical-reverse {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-scroll-vertical {
+  animation: scroll-vertical var(--animation-duration, 40s) linear infinite;
+}
+
+.animate-scroll-vertical-reverse {
+  animation: scroll-vertical-reverse var(--animation-duration, 40s) linear infinite;
+}
+
+.ribbon-container-right {
+  position: relative;
+  width: 110%;
+  top: -50px; /* Adjust this value as needed */
+  height: 100px; /* Adjust this height as needed */
+  overflow: hidden;
+  background-color: #6f1cfa; /* Adjust the background color as needed */
+  transform: rotate(-4deg);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+.ribbon-container-left {
+  position: relative;
+  width: 110%;
+  height: 100px; /* Adjust this height as needed */
+  overflow: hidden;
+  background-color: #6f1cfa; /* Adjust the background color as needed */
+  transform: rotate(4deg);
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.ribbon + .ribbon-container-left + .ribbon-container-right {
+  margin-top: -5px; /* Adjust to slightly overlap the ribbons */
+}
+
+.ribbon {
+  white-space: nowrap;
+}
+
+.ribbon-text {
+  display: inline-block;
+  animation: scrollRibbon 10s linear infinite;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+@keyframes scrollRibbon {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,4 +1,5 @@
 import Hero from '@/components/component/Hero'
+import MovingImages from '@/components/component/MovingImages'
 import TopCreators from '@/components/component/TopCreators'
 import TopCreatorsCarousel from '@/components/component/TopCreatorsCarousel'
 import React from 'react'
@@ -9,6 +10,7 @@ const page = () => {
       <Hero />
       <TopCreators />
       <TopCreatorsCarousel />
+      <MovingImages />
     </div>
   )
 }
